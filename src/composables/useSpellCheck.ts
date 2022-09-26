@@ -2,8 +2,8 @@
 import axios, { AxiosInstance, type AxiosResponse } from 'axios'
 // import { useFontStore } from '../stores/font'
 
-export default function useSpellCheck(contentToCheck: string) {
-  const callApi = () => {
+export default function useSpellCheck() {
+  const callApi = (contentToCheck: string) => {
     const options = {
       method: 'POST',
       url: 'https://jspell-checker.p.rapidapi.com/check',
@@ -25,7 +25,6 @@ export default function useSpellCheck(contentToCheck: string) {
             "ignoreWordsWithNumbers":true
         }}`,
     }
-
     return axios
       .request(options)
       .then(function (response: AxiosResponse) {
