@@ -40,6 +40,7 @@ const loading = ref(false)
 
 const nbErrors = computed(() => {
   if (api.elements) {
+    // @ts-ignore
     return api.elements[0]?.errors.length
   }
   return 0
@@ -47,6 +48,7 @@ const nbErrors = computed(() => {
 
 const getErrors = computed(() => {
   if (api.elements.length > 0) {
+    // @ts-ignore
     return api.elements[0]?.errors
   }
   return []
