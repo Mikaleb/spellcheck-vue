@@ -92,10 +92,6 @@ const highlights = computed(() => {
       end: error.position,
     }
 
-    console.log(
-      '🚀 ~ file: BaseTextareaSpelling.vue ~ line 96 ~ getTextBeforeError ~ lastWord',
-      lastWord
-    )
     if (lastWord && lastWord !== null) {
       positionOfText.start = lastWord.position + lastWord.word.length
       positionOfText.end = error.position

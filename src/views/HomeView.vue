@@ -56,7 +56,6 @@ const checkSpelling = () => {
   loading.value = true
   const { callApi } = useSpellCheck()
   callApi(contentToCheck.value).then((res: any) => {
-    console.log('🚀 ~ file: HomeView.vue ~ line 46 ~ callApi ~ res', res)
     if (res.spellingErrorCount) {
       defineApi(res)
     }
